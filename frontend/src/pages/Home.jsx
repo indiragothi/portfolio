@@ -106,35 +106,29 @@ const Home = () => {
             {/* Right side portrait */}
             <div className="lg:col-span-5">
               <div className="relative mx-auto max-w-md lg:max-w-none">
-                {/* Soft sage backdrop blob */}
-                <div className="absolute -inset-6 -z-10 rounded-[48%_52%_42%_58%/55%_45%_55%_45%] bg-gradient-to-br from-[#B8C9B0]/70 to-[#7E9568]/50 blur-[2px]" />
-                <div className="absolute -right-6 top-10 -z-10 w-40 h-40 rounded-full bg-[#9CAF88]/40 blur-2xl float-slow" />
+                {/* Soft sage circular halo behind */}
+                <div className="absolute -right-10 top-10 -z-10 w-[420px] h-[420px] rounded-full bg-[#9CAF88]/35 blur-2xl float-slow pointer-events-none" />
+                <div className="absolute -left-6 -bottom-10 -z-10 w-72 h-72 rounded-full bg-[#B8C9B0]/40 blur-2xl float-slower pointer-events-none" />
 
-                {/* Portrait frame */}
-                <div className="relative overflow-hidden rounded-[42%_58%_44%_56%/52%_48%_52%_48%] border border-[#E7EEDF] shadow-[0_30px_80px_-30px_rgba(74,93,67,0.45)] bg-[#E7EEDF]">
+                {/* Tall rounded portrait frame (like reference) */}
+                <div className="relative overflow-hidden rounded-[28px] border border-[#E7EEDF] shadow-[0_30px_80px_-30px_rgba(74,93,67,0.4)] bg-[#E7EEDF]">
                   <img
                     src="https://customer-assets.emergentagent.com/job_indira-fullstack/artifacts/efq1lu2c_indira-iigg.jpg"
                     alt="Indira Gothi"
-                    className="w-full h-[520px] md:h-[600px] object-cover object-top"
+                    className="w-full h-[560px] md:h-[640px] object-cover object-top"
                   />
-                </div>
 
-                {/* Floating availability badge */}
-                <div className="absolute -bottom-5 left-4 md:-left-6 bg-[#FAF8F3] border border-[#E7EEDF] rounded-2xl pl-4 pr-5 py-3 shadow-xl flex items-center gap-3">
-                  <span className="relative flex w-2.5 h-2.5">
-                    <span className="absolute inline-flex w-full h-full rounded-full bg-[#7E9568] opacity-60 animate-ping" />
-                    <span className="relative inline-flex w-2.5 h-2.5 rounded-full bg-[#7E9568]" />
-                  </span>
-                  <div className="leading-tight">
-                    <p className="text-[10px] uppercase tracking-[0.22em] text-[#607851]">Now</p>
-                    <p className="font-serif text-[15px] text-[#2C3A2A]">Taking Q3 bookings</p>
+                  {/* Floating availability badge sitting on the image (bottom-left) */}
+                  <div className="absolute bottom-5 left-5 bg-[#FAF8F3]/95 backdrop-blur border border-[#E7EEDF] rounded-2xl pl-4 pr-5 py-3 shadow-xl flex items-center gap-3">
+                    <span className="relative flex w-2.5 h-2.5">
+                      <span className="absolute inline-flex w-full h-full rounded-full bg-[#7E9568] opacity-60 animate-ping" />
+                      <span className="relative inline-flex w-2.5 h-2.5 rounded-full bg-[#7E9568]" />
+                    </span>
+                    <div className="leading-tight">
+                      <p className="text-[10px] uppercase tracking-[0.22em] text-[#607851]">Now</p>
+                      <p className="font-serif text-[15px] text-[#2C3A2A]">Taking Q3 bookings</p>
+                    </div>
                   </div>
-                </div>
-
-                {/* Floating role chip */}
-                <div className="hidden md:flex absolute -top-4 -right-4 items-center gap-2 rounded-full bg-[#2C3A2A] text-[#E7EEDF] px-4 py-2 shadow-xl">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#9CAF88]" />
-                  <span className="text-[11px] uppercase tracking-[0.18em]">Full-Stack &middot; UI</span>
                 </div>
               </div>
             </div>
