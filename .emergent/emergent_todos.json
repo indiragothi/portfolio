@@ -1,0 +1,42 @@
+[
+  {
+    "content": "Set up routing structure & layout (Navbar, Footer)",
+    "status": "completed"
+  },
+  {
+    "content": "Create reusable UI components (Button, Card, SectionTitle)",
+    "status": "completed"
+  },
+  {
+    "content": "Build Home page with hero",
+    "status": "completed"
+  },
+  {
+    "content": "Build About page",
+    "status": "completed"
+  },
+  {
+    "content": "Build Services page",
+    "status": "completed"
+  },
+  {
+    "content": "Build Portfolio page",
+    "status": "completed"
+  },
+  {
+    "content": "Build Testimonials page",
+    "status": "completed"
+  },
+  {
+    "content": "Build Contact page",
+    "status": "completed"
+  },
+  {
+    "content": "Apply sage green theme & premium styling",
+    "status": "completed"
+  },
+  {
+    "content": "Test responsiveness & polish",
+    "status": "completed"
+  }
+]

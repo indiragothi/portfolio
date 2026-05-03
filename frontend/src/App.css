@@ -1,0 +1,117 @@
+.App {
+    min-height: 100vh;
+    background-color: #FAF8F3;
+}
+
+/* Page transition */
+.page-fade {
+    animation: pageFade 0.6s ease-out;
+}
+@keyframes pageFade {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Reveal-on-scroll utility */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Logo mark animation */
+.logo-mark {
+    transition: transform 0.4s ease;
+}
+.logo-mark:hover {
+    transform: rotate(-4deg) scale(1.04);
+}
+
+/* Hero floating shapes */
+.float-slow {
+    animation: floatSlow 9s ease-in-out infinite;
+}
+.float-slower {
+    animation: floatSlow 13s ease-in-out infinite;
+}
+@keyframes floatSlow {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-18px) translateX(8px); }
+}
+
+/* Hover lift */
+.hover-lift {
+    transition: transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.hover-lift:hover {
+    transform: translateY(-4px);
+}
+
+/* Underline link */
+.link-underline {
+    position: relative;
+}
+.link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1.5px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(.2,.8,.2,1);
+}
+.link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Marquee */
+.marquee {
+    display: flex;
+    gap: 3rem;
+    animation: marquee 35s linear infinite;
+}
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Button shine */
+.btn-shine {
+    position: relative;
+    overflow: hidden;
+}
+.btn-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+    transition: left 0.8s ease;
+}
+.btn-shine:hover::before {
+    left: 130%;
+}
+
+/* Noise overlay on hero */
+.grain {
+    position: relative;
+}
+.grain::after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
+}
