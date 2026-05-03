@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import {
+  ArrowRight,
   ArrowUpRight,
   Code2,
+  Download,
   Layers,
   Sparkles,
-  Star,
   Quote,
 } from 'lucide-react';
 import Button from '@/components/Button';
@@ -12,10 +13,10 @@ import Card from '@/components/Card';
 import SectionHeader from '@/components/SectionHeader';
 
 const stats = [
-  { k: '6+', v: 'Years crafting' },
-  { k: '40+', v: 'Projects shipped' },
-  { k: '20+', v: 'Happy clients' },
-  { k: '15+', v: 'Tech & tools' },
+  { k: '48+', v: 'Projects Delivered' },
+  { k: '30+', v: 'Happy Clients' },
+  { k: '5', v: 'Years Experience' },
+  { k: '12', v: 'Countries Served' },
 ];
 
 const services = [
@@ -50,84 +51,75 @@ const Home = () => {
         <div className="absolute -top-20 -right-32 w-[520px] h-[520px] rounded-full bg-[#B8C9B0]/50 blur-3xl float-slow" />
         <div className="absolute top-40 -left-32 w-[420px] h-[420px] rounded-full bg-[#9CAF88]/40 blur-3xl float-slower" />
 
-        <div className="relative max-w-7xl mx-auto px-5 md:px-8 pt-16 md:pt-24 pb-20 md:pb-28">
+        <div className="relative max-w-7xl mx-auto px-5 md:px-8 pt-16 md:pt-24 pb-16 md:pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
-              <p className="text-xs uppercase tracking-[0.22em] text-[#607851] mb-6">
-                <span className="inline-block w-6 h-px align-middle bg-[#9CAF88] mr-3" />
-                Portfolio &middot; Indira Gothi
+              <p className="font-serif text-[28px] md:text-[34px] leading-tight text-[#2C3A2A] mb-2">
+                Hi, I&rsquo;m <span className="italic text-[#607851]">Indira.</span>
               </p>
-              <h1 className="font-serif text-[44px] sm:text-[60px] lg:text-[84px] leading-[0.98] tracking-[-0.02em] text-[#2C3A2A]">
-                Soft systems,
+              <h1 className="font-serif text-[44px] sm:text-[60px] lg:text-[80px] leading-[0.98] tracking-[-0.02em] text-[#2C3A2A]">
+                I design &amp; build
                 <br />
-                <span className="italic text-[#607851]">sharp&nbsp;interfaces.</span>
+                <span className="italic text-[#7E9568]">thoughtful</span> digital
+                <br />
+                experiences.
               </h1>
-              <p className="mt-7 text-[17px] md:text-[19px] leading-relaxed text-[#4A5D43]/85 max-w-xl">
-                Hi, I&rsquo;m Indira — a full-stack &amp; UI developer building considered, calm digital products. I help teams ship interfaces that feel as good as they work.
+              <p className="mt-7 text-[16.5px] md:text-[18px] leading-relaxed text-[#4A5D43]/85 max-w-xl">
+                I craft user-centered digital experiences — from scalable web applications to beautifully designed products that convert.
               </p>
-              <div className="mt-9 flex flex-wrap gap-3">
-                <Button to="/portfolio" size="lg" testId="hero-cta-portfolio">
-                  View selected work
-                </Button>
-                <Button to="/contact" size="lg" variant="secondary" testId="hero-cta-contact">
-                  Start a project
-                </Button>
-              </div>
-
-              <div className="mt-12 flex items-center gap-5 text-[#4A5D43]/80">
-                <div className="flex -space-x-2">
-                  {[0, 1, 2, 3].map((i) => (
-                    <span
-                      key={i}
-                      className="w-9 h-9 rounded-full border-2 border-[#FAF8F3]"
-                      style={{
-                        background: [
-                          '#B8C9B0',
-                          '#9CAF88',
-                          '#7E9568',
-                          '#D3DEC6',
-                        ][i],
-                      }}
-                    />
-                  ))}
-                </div>
-                <div>
-                  <div className="flex items-center gap-1 text-[#4A5D43]">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-[#7E9568] stroke-[#7E9568]" />
-                    ))}
-                    <span className="ml-2 text-sm">5.0 average</span>
-                  </div>
-                  <p className="text-xs mt-0.5">Trusted by founders &amp; design-led teams</p>
-                </div>
+              <div className="mt-9 flex flex-wrap items-center gap-5">
+                <button
+                  onClick={() => (window.location.href = '/contact')}
+                  data-testid="hero-cta-work"
+                  className="btn-shine inline-flex items-center gap-2 rounded-full bg-[#2C3A2A] hover:bg-[#1d2820] text-[#FAF8F3] px-7 py-3.5 text-[15px] tracking-wide transition"
+                >
+                  Work With Me
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                <Link
+                  to="/portfolio"
+                  data-testid="hero-cta-view"
+                  className="inline-flex items-center justify-center rounded-full border border-[#9CAF88] hover:bg-[#E7EEDF] text-[#2C3A2A] px-7 py-3.5 text-[15px] tracking-wide transition"
+                >
+                  View My Work
+                </Link>
+                <a
+                  href="#"
+                  data-testid="hero-cta-resume"
+                  onClick={(e) => e.preventDefault()}
+                  className="inline-flex items-center gap-2 text-[#2C3A2A] text-[15px] link-underline"
+                >
+                  <Download className="w-4 h-4" />
+                  Download Resume
+                </a>
               </div>
             </div>
 
             {/* Right side portrait */}
             <div className="lg:col-span-5">
               <div className="relative mx-auto max-w-md lg:max-w-none">
-                {/* Soft sage circular halo behind */}
-                <div className="absolute -right-10 top-10 -z-10 w-[420px] h-[420px] rounded-full bg-[#9CAF88]/35 blur-2xl float-slow pointer-events-none" />
-                <div className="absolute -left-6 -bottom-10 -z-10 w-72 h-72 rounded-full bg-[#B8C9B0]/40 blur-2xl float-slower pointer-events-none" />
+                {/* Soft sage circle behind (peeks out on the right, like reference) */}
+                <div className="absolute -right-10 top-24 -z-10 w-[420px] h-[420px] rounded-full bg-[#9CAF88]/35 blur-[2px] pointer-events-none" />
+                <div className="absolute -right-16 bottom-0 -z-10 w-72 h-72 rounded-full bg-[#B8C9B0]/40 blur-2xl float-slower pointer-events-none" />
 
-                {/* Tall rounded portrait frame (like reference) */}
+                {/* Tall rounded portrait frame */}
                 <div className="relative overflow-hidden rounded-[28px] border border-[#E7EEDF] shadow-[0_30px_80px_-30px_rgba(74,93,67,0.4)] bg-[#E7EEDF]">
                   <img
                     src="https://customer-assets.emergentagent.com/job_indira-fullstack/artifacts/efq1lu2c_indira-iigg.jpg"
                     alt="Indira Gothi"
                     className="w-full h-[560px] md:h-[640px] object-cover object-top"
                   />
+                </div>
 
-                  {/* Floating availability badge sitting on the image (bottom-left) */}
-                  <div className="absolute bottom-5 left-5 bg-[#FAF8F3]/95 backdrop-blur border border-[#E7EEDF] rounded-2xl pl-4 pr-5 py-3 shadow-xl flex items-center gap-3">
-                    <span className="relative flex w-2.5 h-2.5">
-                      <span className="absolute inline-flex w-full h-full rounded-full bg-[#7E9568] opacity-60 animate-ping" />
-                      <span className="relative inline-flex w-2.5 h-2.5 rounded-full bg-[#7E9568]" />
-                    </span>
-                    <div className="leading-tight">
-                      <p className="text-[10px] uppercase tracking-[0.22em] text-[#607851]">Now</p>
-                      <p className="font-serif text-[15px] text-[#2C3A2A]">Taking Q3 bookings</p>
-                    </div>
+                {/* Floating availability card overlapping the bottom of the image */}
+                <div className="absolute -bottom-5 left-4 md:left-6 bg-[#FAF8F3] border border-[#E7EEDF] rounded-2xl pl-4 pr-6 py-3.5 shadow-2xl flex items-center gap-3">
+                  <span className="relative flex w-2.5 h-2.5">
+                    <span className="absolute inline-flex w-full h-full rounded-full bg-[#7E9568] opacity-60 animate-ping" />
+                    <span className="relative inline-flex w-2.5 h-2.5 rounded-full bg-[#7E9568]" />
+                  </span>
+                  <div className="leading-tight">
+                    <p className="text-[10px] uppercase tracking-[0.22em] text-[#607851]">Now</p>
+                    <p className="font-serif text-[15px] text-[#2C3A2A]">Taking Q3 bookings</p>
                   </div>
                 </div>
               </div>
@@ -135,11 +127,11 @@ const Home = () => {
           </div>
 
           {/* Stats */}
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 reveal">
+          <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 reveal">
             {stats.map((s) => (
-              <div key={s.v} className="border-t border-[#9CAF88]/40 pt-5">
-                <p className="font-serif text-3xl md:text-4xl text-[#2C3A2A]">{s.k}</p>
-                <p className="mt-1 text-sm text-[#4A5D43]/75">{s.v}</p>
+              <div key={s.v}>
+                <p className="font-serif text-5xl md:text-6xl leading-none text-[#2C3A2A]">{s.k}</p>
+                <p className="mt-3 text-[11px] uppercase tracking-[0.22em] text-[#4A5D43]/80">{s.v}</p>
               </div>
             ))}
           </div>
