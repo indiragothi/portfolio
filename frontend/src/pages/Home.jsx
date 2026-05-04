@@ -105,9 +105,9 @@ const Home = () => {
                 {/* Tall rounded portrait frame */}
                 <div className="relative overflow-hidden rounded-[28px] border border-[#E7EEDF] shadow-[0_30px_80px_-30px_rgba(74,93,67,0.4)] bg-[#E7EEDF]">
                   <img
-                    src="https://customer-assets.emergentagent.com/job_indira-fullstack/artifacts/efq1lu2c_indira-iigg.jpg"
-                    alt="Indira Gothi"
-                    className="w-full h-[560px] md:h-[640px] object-cover object-top"
+                    src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=900&q=80&auto=format&fit=crop"
+                    alt="Woman working on a laptop at her desk"
+                    className="w-full h-[560px] md:h-[640px] object-cover object-center"
                   />
                 </div>
 
