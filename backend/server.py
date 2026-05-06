@@ -36,6 +36,14 @@ class StatusCheck(BaseModel):
 
 class StatusCheckCreate(BaseModel):
     client_name: str
+    
+class ContactForm(BaseModel):
+    name: str
+    email: str
+    company: str = ""
+    service: str
+    budget: str
+    message: str
 
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
@@ -65,6 +73,18 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
+
+@api_router.post("/contact")
+async def submit_contact(form: ContactForm):
+    doc = form.model_dump()
+    doc['timestamp'] = datetime.now(timezone.utc).isoformat()
+    await db.contacts.insert_one(doc)
+    return {"message": "success"}
+
+@api_router.get("/contacts")
+async def get_contacts():
+    contacts = await db.contacts.find({}, {"_id": 0}).to_list(1000)
+    return contacts
 
 # Include the router in the main app
 app.include_router(api_router)

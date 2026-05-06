@@ -37,8 +37,12 @@ const Contact = () => {
     }
     setStatus('loading');
     setError('');
-    // Simulate submission (no backend integration requested)
-    await new Promise((r) => setTimeout(r, 900));
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(form)
+    });
+    if (!response.ok) throw new Error('Failed');
     setStatus('success');
     setForm({
       name: '',
