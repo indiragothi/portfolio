@@ -28,6 +28,15 @@ const About = () => {
       >
         <Button to="/portfolio" testId="about-cta-portfolio">See my work</Button>
         <Button to="/contact" variant="secondary" testId="about-cta-contact">Get in touch</Button>
+        <a
+            href="#"
+            data-testid="hero-cta-resume"
+            onClick={(e) => e.preventDefault()}
+            className="inline-flex items-center gap-2 text-[#2C3A2A] text-[15px] link-underline"
+          >
+          <Download className="w-4 h-4" />
+            Download Resume
+        </a>
       </PageHeader>
 
       {/* Bio + portrait */}
