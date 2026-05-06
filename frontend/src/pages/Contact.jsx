@@ -247,7 +247,9 @@ const Contact = () => {
                 ].map((s) => (
                   <a
                     key={s.l}
-                    href="#"
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex flex-col items-center gap-2 rounded-xl border border-[#E7EEDF] py-4 text-[#4A5D43] hover:bg-[#E7EEDF] transition"
                   >
                     {s.i}
