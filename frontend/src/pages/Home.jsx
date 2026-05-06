@@ -13,10 +13,10 @@ import Card from '@/components/Card';
 import SectionHeader from '@/components/SectionHeader';
 
 const stats = [
-  { k: '48+', v: 'Projects Delivered' },
-  { k: '30+', v: 'Happy Clients' },
-  { k: '5', v: 'Years Experience' },
-  { k: '12', v: 'Countries Served' },
+  { k: '10+', v: 'Projects Delivered' },
+  { k: '5+', v: 'Happy Clients' },
+  { k: '2', v: 'Years Experience' },
+  { k: '2', v: 'Countries Served' },
 ];
 
 const services = [
@@ -39,7 +39,7 @@ const services = [
 
 const stack = [
   'React', 'Next.js', 'TypeScript', 'Tailwind', 'Node.js', 'FastAPI',
-  'Python', 'MongoDB', 'PostgreSQL', 'Figma', 'Framer Motion', 'AWS',
+  'Python', 'MongoDB', 'PostgreSQL', 'Figma', 'Framer Motion', 'Vercel',
 ];
 
 const Home = () => {

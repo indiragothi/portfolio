@@ -24,11 +24,11 @@ const About = () => {
       <PageHeader
         eyebrow="About"
         title={<>Hi, I&rsquo;m Indira — building <span className="italic text-[#607851]">calm</span>, considered software.</>}
-        description="I&rsquo;m a full-stack &amp; UI developer based between products and people. For 6+ years I&rsquo;ve helped startups, agencies, and design-led teams turn ambitious briefs into resilient, beautiful interfaces."
+        description="I&rsquo;m a full-stack &amp; UI developer based between products and people. For 2+ years I&rsquo;ve helped startups, agencies, and design-led teams turn ambitious briefs into resilient, beautiful interfaces."
       >
         <Button to="/portfolio" testId="about-cta-portfolio">See my work</Button>
         <Button to="/contact" variant="secondary" testId="about-cta-contact">Get in touch</Button>
-        
+
       </PageHeader>
 
       {/* Bio + portrait */}
@@ -69,8 +69,8 @@ const About = () => {
             </div>
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-5">
               {[
-                ['6+', 'Years experience'],
-                ['40+', 'Shipped projects'],
+                ['2+', 'Years experience'],
+                ['10+', 'Shipped projects'],
                 ['98%', 'Client retention'],
                 ['12', 'Open-source repos'],
               ].map(([k, v]) => (
