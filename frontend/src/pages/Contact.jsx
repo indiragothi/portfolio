@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, MapPin, Clock, Linkedin, Github, Twitter, Check, Loader2, AlertCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import PageHeader from '@/components/PageHeader';
 import Card from '@/components/Card';
 
@@ -15,7 +16,7 @@ const Contact = () => {
     budget: '$5k – $15k',
     message: '',
   });
-  const [status, setStatus] = useState('idle'); // idle | loading | success | error
+  const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
 
   const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
@@ -37,21 +38,41 @@ const Contact = () => {
     }
     setStatus('loading');
     setError('');
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(form)
-    });
-    if (!response.ok) throw new Error('Failed');
-    setStatus('success');
-    setForm({
-      name: '',
-      email: '',
-      company: '',
-      service: 'Full-Stack',
-      budget: '$5k – $15k',
-      message: '',
-    });
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
+      });
+      if (!response.ok) throw new Error('Failed');
+
+      await emailjs.send(
+        'service_5xsb50u',
+        'template_2nu7sg8',
+        {
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          service: form.service,
+          budget: form.budget,
+          message: form.message,
+        },
+        'bbW1xEBgHvUpSUelx'
+      );
+
+      setStatus('success');
+      setForm({
+        name: '',
+        email: '',
+        company: '',
+        service: 'Full-Stack',
+        budget: '$5k – $15k',
+        message: '',
+      });
+    } catch (e) {
+      setError('Something went wrong. Please try again.');
+      setStatus('error');
+    }
   };
 
   return (
