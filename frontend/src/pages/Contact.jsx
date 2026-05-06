@@ -241,9 +241,9 @@ const Contact = () => {
               <p className="text-xs uppercase tracking-[0.22em] text-[#607851]">Elsewhere</p>
               <div className="mt-5 grid grid-cols-3 gap-3">
                 {[
-                  { i: <Linkedin className="w-4 h-4" />, l: 'LinkedIn' },
-                  { i: <Github className="w-4 h-4" />, l: 'GitHub' },
-                  { i: <Twitter className="w-4 h-4" />, l: 'Twitter' },
+                  { i: <Linkedin className="w-4 h-4" />, l: 'LinkedIn', href: 'https://www.linkedin.com/in/indiragothi' },
+                  { i: <Github className="w-4 h-4" />, l: 'GitHub', href: 'https://github.com/indiragothi' },
+                  { i: <Twitter className="w-4 h-4" />, l: 'Twitter', href: 'https://x.com/igsir_07' },
                 ].map((s) => (
                   <a
                     key={s.l}

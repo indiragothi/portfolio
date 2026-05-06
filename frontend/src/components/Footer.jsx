@@ -19,8 +19,8 @@ const navLinks = [
 
 const socials = [
   { label: 'LinkedIn', href: 'https://linkedin.com/in/indiragothi', Icon: Linkedin },
-  { label: 'Twitter', href: 'https://twitter.com/indiragothi', Icon: Twitter },
-  { label: 'Instagram', href: 'https://instagram.com/indiragothi', Icon: Instagram },
+  { label: 'Twitter', href: 'https://x.com/igsir_07', Icon: Twitter },
+  { label: 'Instagram', href: 'https://instagram.com/igsir.07', Icon: Instagram },
   { label: 'GitHub', href: 'https://github.com/indiragothi', Icon: Github },
   { label: 'Dribbble', href: 'https://indiragothi.vercel.app/', Icon: Dribbble },
 ];
