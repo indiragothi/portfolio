@@ -47,7 +47,7 @@ const Contact = () => {
       if (!response.ok) throw new Error('Failed');
 
       await emailjs.send(
-        'service_5xsb50u',
+        'service_zak2d4o',
         'template_2nu7sg8',
         {
           name: form.name,
