@@ -22,7 +22,7 @@ const socials = [
   { label: 'Twitter', href: 'https://twitter.com/indiragothi', Icon: Twitter },
   { label: 'Instagram', href: 'https://instagram.com/indiragothi', Icon: Instagram },
   { label: 'GitHub', href: 'https://github.com/indiragothi', Icon: Github },
-  { label: 'Dribbble', href: 'https://dribbble.com/indiragothi', Icon: Dribbble },
+  { label: 'Dribbble', href: 'https://indiragothi.vercel.app/', Icon: Dribbble },
 ];
 
 const Footer = () => {
