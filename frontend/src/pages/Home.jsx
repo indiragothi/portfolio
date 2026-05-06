@@ -84,10 +84,10 @@ const Home = () => {
                   View My Work
                 </Link>
                 <a
-                  href="https://drive.google.com/file/d/1GgSzDcBUlrf_IDe_5HZpX0xiClFVeMa2/view?usp=sharing"
+                  href="https://drive.google.com/uc?export=download&id=1GgSzDcBUlrf_IDe_5HZpX0xiClFVeMa2"
                   target="_blank"
+                  rel="noopener noreferrer"
                   data-testid="hero-cta-resume"
-                  // onClick={(e) => e.preventDefault()}
                   className="inline-flex items-center gap-2 text-[#2C3A2A] text-[15px] link-underline"
                 >
                   <Download className="w-4 h-4" />
