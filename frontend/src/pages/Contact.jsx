@@ -48,7 +48,7 @@ const Contact = () => {
 
       await emailjs.send(
         'service_zak2d4o',
-        'template_2nu7sg8',
+        'template_k8oovd3',
         {
           name: form.name,
           email: form.email,
